@@ -18,10 +18,12 @@ export class ChildrenComponent implements OnInit {
 
   multiply() {
     this.counter *= 2;
+    this.changeCounter.emit(this.counter);
   }
 
   divide() {
     this.counter /= 2;
+    this.changeCounter.emit(this.counter);
   }
 
 }

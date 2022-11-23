@@ -20,7 +20,7 @@
     <hr>
     <div class="row text-center">
         <div class="col">
-            <app-children [counter]="counter"></app-children>
+            <app-children [counter]="counter" (changeCounter)="counter = $event"></app-children>
         </div>
     </div>
     <hr>
