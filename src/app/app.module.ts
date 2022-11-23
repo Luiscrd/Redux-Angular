@@ -10,6 +10,8 @@ import { DefaultComponent } from './pages/default/default.component';
 import { ReduxComponent } from './pages/redux/redux.component';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './counter/counter.reducer';
+import { ChildrenReduxComponent } from './counter/children-redux/children-redux.component';
+import { GrandsonReduxComponent } from './counter/grandson-redux/grandson-redux.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { counterReducer } from './counter/counter.reducer';
     GrandsonComponent,
     NavbarComponent,
     DefaultComponent,
-    ReduxComponent
+    ReduxComponent,
+    ChildrenReduxComponent,
+    GrandsonReduxComponent
   ],
   imports: [
     BrowserModule,

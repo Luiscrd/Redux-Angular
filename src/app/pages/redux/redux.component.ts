@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { decrement, increment } from 'src/app/counter/counter.actions';
+
+interface AppState {
+  count: number
+}
 
 @Component({
   selector: 'app-redux',
@@ -6,23 +12,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./redux.component.css']
 })
 export class ReduxComponent implements OnInit {
-  counter: number;
 
-  constructor() {
+  counter: number = 10;
 
-    this.counter = 10;
+  constructor(
 
+    private store: Store<AppState>
+
+  ) {
+
+    this.store.subscribe(state => {
+
+      console.log(state.count);
+
+      this.counter = state.count;
+
+    })
   }
+
   ngOnInit(): void {
 
   }
 
   increment() {
-    this.counter += 1;
+    this.store.dispatch(increment());
   }
 
   decrement() {
-    this.counter -= 1;
+    this.store.dispatch(decrement());
   }
 
 }
