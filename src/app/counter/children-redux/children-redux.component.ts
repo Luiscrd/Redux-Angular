@@ -1,4 +1,7 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/app.reducers';
+import { divide, multipy } from '../counter.actions';
 
 @Component({
   selector: 'app-children-redux',
@@ -9,16 +12,26 @@ export class ChildrenReduxComponent implements OnInit {
 
  counter: number = 0;
 
-  constructor() { }
+  constructor(
+
+    private store: Store<AppState>
+
+  ) { }
 
   ngOnInit(): void {
+
+    this.store.select('count').subscribe(counter => this.counter = counter);
   }
 
-  multiply() {
+  multiply(num: number) {
+
+    this.store.dispatch(multipy({num}));
 
   }
 
-  divide() {
+  divide(num: number) {
+
+    this.store.dispatch(divide({num}));
 
   }
 
