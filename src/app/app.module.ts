@@ -4,15 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ChildrenComponent } from './counter/children/children.component';
 import { GrandsonComponent } from './counter/grandson/grandson.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DefaultComponent } from './pages/default/default.component';
+import { ReduxComponent } from './pages/redux/redux.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChildrenComponent,
-    GrandsonComponent
+    GrandsonComponent,
+    NavbarComponent,
+    DefaultComponent,
+    ReduxComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

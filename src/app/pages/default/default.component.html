@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <div class="row text-center">
+        <div class="col">
+            <h1>counter</h1>
+            <hr>
+            <div class="row">
+                <div class="col-5 text-end">
+                    <button type="button" class="btn btn-danger" (click)="decrement()">Decrementar - 1</button>
+                </div>
+                <div class="col-2 text-center">
+                    <h2>{{ counter }}</h2>
+                </div>
+                <div class="col-5 text-start">
+                    <button type="button" class="btn btn-danger" (click)="increment()">Incrementar + 1</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row text-center">
+        <div class="col">
+            <app-children [counter]="counter" (changeCounter)="counter = $event"></app-children>
+        </div>
+    </div>
+    <hr>
+</div>
