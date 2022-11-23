@@ -26,4 +26,9 @@ export class ChildrenComponent implements OnInit {
     this.changeCounter.emit(this.counter);
   }
 
+  resetGrandson(event: number){
+    this.counter = event;
+    this.changeCounter.emit(this.counter);
+  }
+
 }
