@@ -15,7 +15,13 @@
                     <button type="button" class="btn btn-danger" (click)="incrementar()">Incrementar</button>
                 </div>
             </div>
-            <hr>
         </div>
     </div>
+    <hr>
+    <div class="row text-center">
+        <div class="col">
+            <app-children [contador]="contador"></app-children>
+        </div>
+    </div>
+    <hr>
 </div>
