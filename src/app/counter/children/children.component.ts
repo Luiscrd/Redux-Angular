@@ -14,4 +14,12 @@ export class ChildrenComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  multiplicar() {
+    this.contador = this.contador * 2;
+  }
+
+  dividir() {
+    this.contador = this.contador / 2;
+  }
+
 }
