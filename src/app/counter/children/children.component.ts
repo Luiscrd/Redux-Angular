@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-children',
@@ -7,19 +7,21 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ChildrenComponent implements OnInit {
 
-  @Input() contador: number = 0;
+  @Input() counter: number = 0;
+
+  @Output() changeCounter = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  multiplicar() {
-    this.contador = this.contador * 2;
+  multiply() {
+    this.counter *= 2;
   }
 
-  dividir() {
-    this.contador = this.contador / 2;
+  divide() {
+    this.counter /= 2;
   }
 
 }

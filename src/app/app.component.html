@@ -2,17 +2,17 @@
 <div class="container mt-5">
     <div class="row text-center">
         <div class="col">
-            <h1>Contador</h1>
+            <h1>counter</h1>
             <hr>
             <div class="row">
                 <div class="col-5 text-end">
-                    <button type="button" class="btn btn-danger" (click)="decrementar()">Decrementar</button>
+                    <button type="button" class="btn btn-danger" (click)="decrement()">Decrementar - 1</button>
                 </div>
                 <div class="col-2 text-center">
-                    <h2>{{ contador }}</h2>
+                    <h2>{{ counter }}</h2>
                 </div>
                 <div class="col-5 text-start">
-                    <button type="button" class="btn btn-danger" (click)="incrementar()">Incrementar</button>
+                    <button type="button" class="btn btn-danger" (click)="increment()">Incrementar + 1</button>
                 </div>
             </div>
         </div>
@@ -20,7 +20,7 @@
     <hr>
     <div class="row text-center">
         <div class="col">
-            <app-children [contador]="contador"></app-children>
+            <app-children [counter]="counter"></app-children>
         </div>
     </div>
     <hr>
