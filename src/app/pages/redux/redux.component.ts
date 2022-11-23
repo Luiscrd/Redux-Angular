@@ -21,11 +21,8 @@ export class ReduxComponent implements OnInit {
 
   ) {
 
-    this.store.subscribe(state => {
+    this.store.select('count').subscribe(counter => this.counter = counter);
 
-      this.counter = state.count;
-
-    })
   }
 
   ngOnInit(): void {
