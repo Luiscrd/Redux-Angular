@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DefaultComponent } from './pages/default/default.component';
 import { ReduxComponent } from './pages/redux/redux.component';
 import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './counter/counter.reducer';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { StoreModule } from '@ngrx/store';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot({ count: counterReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]
