@@ -23,8 +23,6 @@ export class ReduxComponent implements OnInit {
 
     this.store.subscribe(state => {
 
-      console.log(state.count);
-
       this.counter = state.count;
 
     })
@@ -35,11 +33,15 @@ export class ReduxComponent implements OnInit {
   }
 
   increment() {
+
     this.store.dispatch(increment());
+
   }
 
   decrement() {
+
     this.store.dispatch(decrement());
+
   }
 
 }

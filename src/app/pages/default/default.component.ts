@@ -19,11 +19,15 @@ export class DefaultComponent implements OnInit {
   }
 
   increment() {
+
     this.counter += 1;
+
   }
 
   decrement() {
+
     this.counter -= 1;
+
   }
 
 }

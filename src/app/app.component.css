@@ -1,7 +1,7 @@
 #backgroud {
     background-image: url('../assets/angular.jpg');
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-position: top;
     position: absolute;
     top: 0;
