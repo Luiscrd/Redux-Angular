@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-grandson-redux',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GrandsonReduxComponent implements OnInit {
 
+  @Input() counter: number = 0;
+
+  @Output() changeCounter = new EventEmitter<number>();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  reset(number: number){
+    this.counter = number;
+    this.changeCounter.emit(number);
   }
 
 }

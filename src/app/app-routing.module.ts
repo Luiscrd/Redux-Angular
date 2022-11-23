@@ -4,9 +4,9 @@ import { DefaultComponent } from './pages/default/default.component';
 import { ReduxComponent } from './pages/redux/redux.component';
 
 const routes: Routes = [
-  {path: '', component: DefaultComponent},
+  {path: 'default', component: DefaultComponent},
   {path: 'redux', component: ReduxComponent},
-  {path: '**', redirectTo: '', pathMatch: 'full'}
+  {path: '**', redirectTo: 'default', pathMatch: 'full'}
 ];
 
 @NgModule({

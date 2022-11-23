@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/app.reducers';
 import { decrement, increment } from 'src/app/counter/counter.actions';
-
-interface AppState {
-  count: number
-}
 
 @Component({
   selector: 'app-redux',
