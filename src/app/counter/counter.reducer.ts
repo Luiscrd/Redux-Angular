@@ -9,5 +9,5 @@ export const counterReducer = createReducer(
   on(decrement, (state) => state - 1),
   on(multipy, (state, {num}) => state * num),
   on(divide, (state, {num}) => state / num),
-  on(reset, (state) => state = 0)
+  on(reset,  (state, {num}) => state = num)
 );
